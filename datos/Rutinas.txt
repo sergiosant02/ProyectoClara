@@ -1,0 +1,15 @@
+Rutina1
+Esta rutina 1 contiene un ejemplo.
+3
+30
+----------
+Rutina2
+Esta rutina 2 contiene un ejemplo.
+5
+45
+----------
+Rutina3
+Esta rutina 3 contiene un ejemplo.
+2
+15
+----------
