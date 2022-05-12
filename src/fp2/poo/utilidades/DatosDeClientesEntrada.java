@@ -72,28 +72,16 @@ public class DatosDeClientesEntrada implements Iterator<ClienteInterfaz> {
         while( (finLectura  == false) && (cliente == null) ) {
             lecturaInvalida = false;
             try{
-                try {
-                     linea = in.readLine().trim();  
-                     dni   = new Dni (linea);
-                } catch ( DniIncorrectoExcepcion e ) {
-                    lecturaInvalida = true;
-                }
+                linea = in.readLine().trim();  
+				 dni   = new Dni (linea);
                 linea   =  in.readLine().trim(); 
                 nombre  =  linea;
-                try {
-                     linea    = in.readLine().trim();  
-                     telefono = new Telefono (linea);
-                } catch ( TelefonoIncorrectoExcepcion e ) {                  
-                    lecturaInvalida = true;
-                } 
+                linea    = in.readLine().trim();  
+				 telefono = new Telefono (linea); 
                 linea     = (in.readLine()).trim(); 
                 domicilio = new Domicilio( linea ); 
-                try {
-                     linea = in. readLine().trim(); 
-                     eMail       = new CorreoElectronico (linea);
-                } catch ( CorreoElectronicoIncorrectoExcepcion e ) {
-                    lecturaInvalida = true;
-                }                                          
+                linea = in. readLine().trim(); 
+				 eMail       = new CorreoElectronico (linea);                                          
                 linea           = in. readLine().trim();  
                 idEntrenamiento = linea;
                 

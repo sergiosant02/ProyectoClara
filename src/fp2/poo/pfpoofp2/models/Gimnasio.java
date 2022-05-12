@@ -3,12 +3,14 @@ package fp2.poo.pfpoofp2.models;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import fp2.poo.utilidades.ClienteInterfaz;
 import fp2.poo.utilidades.DatosDeClientesEntrada;
 import fp2.poo.utilidades.DatosDeRutinasEntrada;
 import fp2.poo.utilidades.GimnasioAbstracta;
 import fp2.poo.utilidades.RutinaDeEntrenamientoInterfaz;
+import fp2.poo.utilidades.Excepciones.DniIncorrectoExcepcion;
 import fp2.poo.utilidades.Excepciones.OperacionNoPermitidaExcepcion;
 
 public class Gimnasio extends GimnasioAbstracta {
@@ -21,7 +23,7 @@ public class Gimnasio extends GimnasioAbstracta {
 		this.listaRutinas = listaRutinas;
 	}
 	
-	public Gimnasio(String clientesPath, String rutinasPath) throws OperacionNoPermitidaExcepcion {
+	public Gimnasio(String clientesPath, String rutinasPath) throws OperacionNoPermitidaExcepcion, NoSuchElementException, DniIncorrectoExcepcion {
 		DatosDeClientesEntrada datosClientes = new DatosDeClientesEntrada(clientesPath);
 		List<ClienteInterfaz> ls = new ArrayList<>();
 		while(datosClientes.hasNext()) {

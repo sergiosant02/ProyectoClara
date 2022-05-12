@@ -9,7 +9,7 @@
 
 package fp2.poo.utilidades;
 
-import fp2.poo.pfpoofp2.models.RutinaDeEntrenamiento;
+import fp2.poo.pfpoofp2.models.RutinaEntrenamiento;
 import fp2.poo.utilidades.Excepciones.OperacionNoPermitidaExcepcion; 
 
 import java.io.FileInputStream;
@@ -77,7 +77,7 @@ public class DatosDeRutinasEntrada implements Iterator<RutinaDeEntrenamientoInte
                 
                 
                 if(lecturaInvalida == false) {   
-                    rutina = new RutinaDeEntrenamiento ( idEntrenamiento,
+                    rutina = new RutinaEntrenamiento ( idEntrenamiento,
                                                      descripcion,
                                                      frecuencia,
                                                      tiempo); 

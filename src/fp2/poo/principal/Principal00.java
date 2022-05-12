@@ -21,7 +21,7 @@ import  fp2.poo.utilidades.Excepciones.DniIncorrectoExcepcion;
 import  fp2.poo.utilidades.Excepciones.TelefonoIncorrectoExcepcion;
 
 public class Principal00 {
-    public static void main(String args[]) {
+    public static void main(String args[]) throws CorreoElectronicoIncorrectoExcepcion, DniIncorrectoExcepcion, TelefonoIncorrectoExcepcion {
     	
     	//RutinaModel rutina = new RutinaModel("","",8,9);
     	//rutina.getIdentificador();
@@ -83,12 +83,6 @@ public class Principal00 {
             }
         } catch ( OperacionNoPermitidaExcepcion e) {
             System.err.println(e);
-        } catch (CorreoElectronicoIncorrectoExcepcion e) {
-            System.err.println("Correo Electronico Incorrecto en Principal00.");
-        } catch (DniIncorrectoExcepcion e) {
-            System.err.println("Dni Incorrecto en Principal00.");
-        } catch (TelefonoIncorrectoExcepcion e) {
-            System.err.println("Telefono Incorrecto en Principal00.");
         }
         
         System.out.println("\nSe muestran los clientes.\n==============================\n");        

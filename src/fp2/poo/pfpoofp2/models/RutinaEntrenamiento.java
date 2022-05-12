@@ -8,6 +8,16 @@ public class RutinaEntrenamiento implements RutinaDeEntrenamientoInterfaz {
 	int frecuencia;
 	int tiempo;
 	
+	
+	
+	public RutinaEntrenamiento(String id, String descripcion, int frecuencia, int tiempo) {
+		super();
+		this.id = id;
+		this.descripcion = descripcion;
+		this.frecuencia = frecuencia;
+		this.tiempo = tiempo;
+	}
+	
 	public String getId() {
 		return id;
 	}
