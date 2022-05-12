@@ -3,7 +3,7 @@ package fp2.poo.pfpoofp2.models;
 import fp2.poo.utilidades.DniInterfaz;
 
 public class Dni implements DniInterfaz {
-	String dni;
+	private String dni;
 
 	public String getDni() {
 		return dni;

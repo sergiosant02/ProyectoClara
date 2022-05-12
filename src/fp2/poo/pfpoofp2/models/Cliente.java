@@ -6,7 +6,7 @@ import fp2.poo.utilidades.DniInterfaz;
 import fp2.poo.utilidades.DomicilioInterfaz;
 import fp2.poo.utilidades.TelefonoInterfaz;
 
-public class Cliente implements ClienteInterfaz {
+public class Cliente implements ClienteInterfaz, Comparable<Cliente> {
 	private DniInterfaz dni;
 	private String nombre;
 	private TelefonoInterfaz telefono;
@@ -62,4 +62,18 @@ public class Cliente implements ClienteInterfaz {
 	    public void setEntrenamiento( String unEntrenamiento ) {
 	    	this.entrenamiento = unEntrenamiento;
 	    }
+
+
+		@Override
+		public int compareTo(Cliente cliente) {
+			int res = this.dni.getDni().compareTo(cliente.getDni().getDni());
+			if(res == 0) {
+				res = this.getDomicilio().getDomicilio().compareTo(cliente.getDomicilio().getDomicilio());
+				if(res == 0) {
+					res = this.getCorreoElectronico().getCorreoElectronico().compareTo(cliente.getCorreoElectronico().getCorreoElectronico());
+				}
+			}
+			
+			return res;
+		}
 }
